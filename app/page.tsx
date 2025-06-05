@@ -132,7 +132,12 @@ export default function Chat() {
                           children={message.content}
                           remarkPlugins={[remarkGfm]}
                           components={{
-                            code({ inline, className, children, ...props }) {
+                            code({
+                              inline,
+                              className,
+                              children,
+                              ...props
+                            }: any) {
                               return inline ? (
                                 <code
                                   className="bg-gray-200 px-1 rounded"
